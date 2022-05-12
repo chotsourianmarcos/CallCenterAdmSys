@@ -1,0 +1,36 @@
+<br>
+
+<div class="row">
+    <div class="col-md-3">
+        <p>Ingrese los datos del nuevo cliente:</p>
+    </div>
+</div>
+
+<br>
+
+<div class="form-wrapper">
+
+    <form [formGroup]="addForm" (ngSubmit)="onSubmitAdd()">
+
+        <app-person-data-form></app-person-data-form>
+    
+        <br>
+    
+        <app-client-data-form></app-client-data-form>
+    
+    <div class="row">
+        <div class="col-md-10">
+        </div>
+        <div class="col-md-2">
+            <button type="submit" [disabled]="!addForm.valid" class="btn btn-outline-primary">Agregar</button>
+            <button type="reset" class="btn btn-outline-primary">Reset</button>
+        </div>
+        </div>
+    
+    </form>
+
+</div>
+
+<hr>
+
+<app-clients-list></app-clients-list>

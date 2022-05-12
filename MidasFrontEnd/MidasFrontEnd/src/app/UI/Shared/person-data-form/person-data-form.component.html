@@ -1,0 +1,90 @@
+<form [formGroup]="form">
+    <div class="form-container" formGroupName="personData">
+
+        <div class="row top-separation">
+
+            <div class="col-md-2">
+                <p>DNI</p>
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" formControlName="DNI">
+            </div>
+
+            <div class="col-md-2">
+                <p>Nombres</p>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" formControlName="FirstNames">
+            </div>
+
+            <div class="col-md-2">
+                <p>Apellidos</p>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" formControlName="SurNames">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row top-separation">
+            <div class="col-md-2">
+                <p>Género</p>
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" formControlName="GenderID">
+            </div>
+
+            <div class="col-md-2">
+                <p>Fecha de nacimiento</p>
+            </div>
+            <div class="col-md-2">
+                <input type="date" class="form-control" formControlName="BirthDate">
+            </div>
+
+            <div class="col-md-2">
+                <p>Teléfono</p>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" formControlName="PhoneNumber">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row top-separation">
+            <div class="col-md-2">
+                <p>E-mail</p>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" formControlName="Email">
+            </div>
+
+            <div class="col-md-2">
+                <p>Tipo de contacto preferido</p>
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" formControlName="PreferedContactTypeID">
+            </div>
+
+            <div class="col-md-2">
+                <p>Observaciones</p>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control" type="string" formControlName="Observations">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row top-separation">
+            <div class="col-md-2">
+                <p>Ruta archivos</p>
+            </div>
+            <div class="col-md-2">
+                <input type="string" class="form-control" formControlName="FilesRoute">
+            </div>
+        </div>
+
+    </div>
+</form>

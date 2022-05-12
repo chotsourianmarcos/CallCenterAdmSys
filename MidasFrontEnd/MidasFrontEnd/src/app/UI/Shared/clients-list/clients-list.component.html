@@ -1,0 +1,19 @@
+<h3>Lista de clientes:</h3>
+<table class="table">
+    <thead>
+      <th scope="col">Nro. Cliente</th>
+      <th scope="col">Nombres - Apellidos</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">Mail</th>
+      <th scope="col">Activo</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let clientItem of clientsList">
+            <td>{{ clientItem.ClientID }}</td>
+            <td>{{ clientItem.FirstNames }} - {{ clientItem.SurNames }}</td>
+            <td>{{ clientItem.PhoneNumber }}</td>
+            <td>{{ clientItem.Email }}</td>
+            <td>{{ clientItem.Active }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,78 @@
+<br>
+
+<div [hidden]="modifyVisible">
+
+    <div class="row">
+        <div class="col-md-3">
+            <p>Ingrese los datos del cliente a modificar:</p>
+        </div>
+    </div>
+    
+    <br>
+    
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmitSearchParams()">
+      
+        <div class="row top-separation">
+            <div class="col-md-2">
+                <p>Nro. Cliente</p>
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" formControlName="ClientID">
+            </div>
+        
+            <div class="col-md-2">
+                <p>DNI</p>
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" formControlName="DNI">
+            </div>
+    
+        </div>
+    
+        <div class="row top-separation">
+            <div class="col-md-10">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" [disabled]="!searchForm.valid" class="btn btn-outline-primary">Buscar</button>
+            </div>
+        </div>
+        
+    </form>
+
+    <br>
+    
+    <app-clients-list></app-clients-list>
+        
+    <br>
+    
+    <div class="row top-separation">
+        <div class="col-md-10">
+        </div>
+        <div class="col-md-2">
+            <button (click)="showUpdateClient(true)" class="btn btn-outline-primary">Modificar cliente</button>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+<form [formGroup]="updateForm" (ngSubmit)="updateClient()" [hidden]="!modifyVisible">
+
+    <app-person-data-form></app-person-data-form>
+
+    <br>
+
+    <app-client-data-form></app-client-data-form>
+
+    <div class="row">
+        <div class="col-md-10">
+        </div>
+        <div class="col-md-2">
+            <button type="submit" [disabled]="!searchForm.valid" class="btn btn-outline-primary">Buscar</button>
+            <button type="reset" class="btn btn-outline-primary">Reset</button>
+            <button (click)="showUpdateClient(false)" class="btn btn-outline-primary">Cancelar</button>
+        </div>
+        </div>
+
+</form>

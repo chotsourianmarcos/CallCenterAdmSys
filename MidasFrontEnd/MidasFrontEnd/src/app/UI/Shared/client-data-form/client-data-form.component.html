@@ -1,0 +1,46 @@
+<form [formGroup]="form">
+    <div class="form-container" formGroupName="clientData">
+
+        <div class="row top-separation">
+            <div class="col-md-2">
+                <p>Nro. Cliente</p>
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" formControlName="ClientID">
+            </div>
+
+            <div class="col-md-2">
+                <p>Nro. Cliente Excel</p>
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" formControlName="ExcelID">
+            </div>
+
+            <div class="col-md-2">
+                <p>Balance Financiero</p>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control" type="number" formControlName="FinancialBalance">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row top-separation">
+            <div class="col-md-2">
+                <p>Servicios contratados</p>
+            </div>
+            <div class="col-md-2">
+                <input type="string" class="form-control" formControlName="ActiveServices">
+            </div>
+
+            <div class="col-md-2">
+                <p>Activo</p>
+            </div>
+            <div class="col-md-2">
+                <input type="checkbox" class="form-check-input" formControlName="Active">
+            </div>
+        </div>
+
+    </div>
+</form>

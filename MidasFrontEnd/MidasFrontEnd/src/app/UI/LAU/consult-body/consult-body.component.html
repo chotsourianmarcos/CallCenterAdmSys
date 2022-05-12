@@ -1,0 +1,152 @@
+<br>
+
+<div class="row">
+    <div class="col-md-3">
+        <p>Ingrese los datos de búsqueda:</p>
+    </div>
+</div>
+
+<br>
+
+<form [formGroup]="searchForm" (ngSubmit)="onSubmitSearchParams()">
+  
+    <div class="row top-separation">
+        <div class="col-md-2">
+            <p>Nro. Cliente</p>
+        </div>
+        <div class="col-md-2">
+            <input type="number" class="form-control" formControlName="ClientID">
+        </div>
+    
+        <div class="col-md-2">
+            <p>DNI</p>
+        </div>
+        <div class="col-md-2">
+            <input type="number" class="form-control" formControlName="DNI">
+        </div>
+    
+        <div class="col-md-2">
+            <p>Apellidos</p>
+        </div>
+        <div class="col-md-2">
+            <input type="text" class="form-control" formControlName="SurNames">
+        </div>
+    </div>
+    
+    <br>
+    
+    <div class="row top-separation">
+        <div class="col-md-2">
+            <p>Nombres</p>
+        </div>
+        <div class="col-md-2">
+            <input type="text" class="form-control" formControlName="FirstNames">
+        </div>
+    
+        <div class="col-md-2">
+            <p>Fecha de nacimiento desde</p>
+        </div>
+        <div class="col-md-2">
+            <input type="date" class="form-control" formControlName="BirthDateFrom">
+        </div>
+    
+        <div class="col-md-2">
+            <p>Fecha de nacimiento hasta</p>
+        </div>
+        <div class="col-md-2">
+            <input type="date" class="form-control" formControlName="BirthDateTo">
+        </div>
+    </div>
+    
+    <br>
+    
+    <div class="row top-separation">
+        <div class="col-md-2">
+            <p>Balance desde</p>
+        </div>
+        <div class="col-md-2">
+            <input type="number" class="form-control" formControlName="FinancialBalanceFrom">
+        </div>
+    
+        <div class="col-md-2">
+            <p>Balance hasta</p>
+        </div>
+        <div class="col-md-2">
+            <input type="text" class="form-control" formControlName="FinancialBalanceTo">
+        </div>
+    
+        <div class="col-md-2">
+            <p>Activo</p>
+        </div>
+
+        <div class="col-md-2">
+            <input class="form-check-input" type="checkbox" formControlName="Active">
+        </div>
+    </div>
+
+    <!-- <br>
+    
+    <div class="row top-separation">
+        ARMAR CHECKBOXLIST QUE DEPENDA DE PRODUCTS EN BASE
+        <div class="col-md-2">
+            <p>Servicios contratados</p>
+        </div>
+        <div class="col-md-1">
+            <p>A</p>
+        </div>
+        <div class="col-md-1">
+            <input type="number" class="form-control" formControlName="FinancialBalanceFrom">
+        </div>
+        <div class="col-md-1">
+            <p>A</p>
+        </div>
+        <div class="col-md-1">
+            <input type="number" class="form-control" formControlName="FinancialBalanceFrom">
+        </div>
+        <div class="col-md-1">
+            <p>B</p>
+        </div>
+        <div class="col-md-1">
+            <input type="number" class="form-control" formControlName="FinancialBalanceFrom">
+        </div>
+        <div class="col-md-1">
+            <p>C</p>
+        </div>
+        <div class="col-md-1">
+            <input type="number" class="form-control" formControlName="FinancialBalanceFrom">
+        </div>
+        <div class="col-md-1">
+            <p>D</p>
+        </div>
+        <div class="col-md-1">
+            <input type="number" class="form-control" formControlName="FinancialBalanceFrom">
+        </div>
+        
+    </div> -->
+    
+    <br>
+    
+    <div class="row">
+    <div class="col-md-10">
+    </div>
+    <div class="col-md-2">
+        <button type="submit" [disabled]="!searchForm.valid" class="btn btn-outline-primary">Buscar</button>
+        <button type="reset" class="btn btn-outline-primary">Reset</button>
+    </div>
+    </div>
+
+</form>
+
+<hr>
+
+<app-clients-list></app-clients-list>
+
+<br>
+
+<div class="row top-separation">
+    <div class="col-md-10">
+    </div>
+    <div class="col-md-2">
+        <button (click)="consultDetail()" class="btn btn-outline-primary">Ver detalle de cliente.</button>
+    </div>
+</div>
